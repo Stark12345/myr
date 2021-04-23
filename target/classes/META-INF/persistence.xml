@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	
+	<persistence-unit name="pandemiaPU" transaction-type="JTA">
+	<jta-data-source> java:/PandemiaDS </jta-data-source>
+	<class>com.myr.myr.models.entities.Alquiler</class>
+	<class>com.myr.myr.models.entities.Alumno</class>
+	<class>com.myr.myr.models.entities.Distrito</class>
+	<class>com.myr.myr.models.entities.Habitacion</class>
+	<class>com.myr.myr.models.entities.Interes</class>
+	<class>com.myr.myr.models.entities.Propiedad</class>
+	<class>com.myr.myr.models.entities.Propietario</class>
+	<class>com.myr.myr.models.entities.TipoInterior</class>
+	<class>com.myr.myr.models.entities.TipoNMz</class>
+	<class>com.myr.myr.models.entities.TipoVia</class>
+	<class>com.myr.myr.models.entities.Universidad</class>
+	
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
+	<properties>	
+	<property name="javax.persistence.schema-generation.database.action"
+				value = "drop-and-create"	/>
+	
+	</properties>
+	</persistence-unit>
+</persistence>
+	
